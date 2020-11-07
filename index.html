@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>controlador</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  </head>
+  <body>
+    <div id="app1">
+      <div ng-controller="controlador1">
+        <h1>Hello {{yourName}}!</h1>
+        <label>Name:</label>
+        <input
+        type="text"
+        ng-model="yourName"
+        placeholder="Enter a name here"
+        />
+        <hr />
+      </div>
+    </div>
+    <!-- NAO POE O NG-APP NA DIV DA APLICAÇÃO, MAS TEMOS QUE EXECUTA-LA MANUALMENTE 
+    ATRAVÉS DO ANGULAR.BOOTSTRAP -->
+    <div id="app2">
+      <div ng-controller="controlador2">
+        <h1>contador</h1>
+        <h1>{{ contador }}</h1>
+        <button ng-click="contador = contador + 1">ADD + 1</button>
+        <button ng-click="contador = contador - 1">SUB - 1</button>
+      </div>
+    </div>
+    <!-- A IMPORTAÇÃO DO ARQUIVO TEM QUE FICAR NO FINAL PARA QUE A PÁGINA TENHA SIDO CARREGADA
+       PARA PODER BUSCAR OS ELEMENTOS ONDE A PÁGINA VAI SER EXECUTADA-->
+    <script src="app.js"></script>
+  </body>
+  </html>
+  
